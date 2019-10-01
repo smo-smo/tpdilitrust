@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Upload/download File with Dropwizard</title>
+     <style>
+          div {border: 2px solid blue;
+              width :70%;padding-left:15px;
+              margin-left:15%;
+              align: center;
+              }
+     </style>
+</head>
+<body>
+    <div>
+        <h4 style="text-decoration : underline;">Upload file :</h4>
+
+        <form action="/files/upload" method="post" enctype="multipart/form-data">
+
+            Choose a file: <input type="file" name="file" />
+
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+<br/>
+    <div >
+        <h4 style="text-decoration : underline;">Upload and crypt file :</h4>
+        <form action="/files/upload-and-encrypt" method="post" enctype="multipart/form-data">
+
+            Choose a file: <input type="file" name="file" />
+
+           <input type="submit" value="Upload and crypt" />
+        </form>
+    </div>
+<br/>
+    <div >
+        <h4 style="text-decoration : underline;">Download file :</h4>
+        <form action="/files/download" method="get">
+
+            File name: <input type="text" name="filename" size="50">
+
+           <input type="submit" value="download" />
+        </form>
+    </div>
+<br/>
+    <div >
+        <h4 style="text-decoration : underline;">Download a encrypted file :</h4>
+        <form action="/files/download-encrypted-file" method="get">
+
+            File name: <input type="text" name="filename" size="50">
+
+           <input type="submit" value="decrypt and download" />
+        </form>
+    </div>
+</body>
+</html>
